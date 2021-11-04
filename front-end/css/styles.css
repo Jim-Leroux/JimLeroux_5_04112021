@@ -1,0 +1,113 @@
+/*---------------------------------------- GENERAL SETTINGS ----------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*---------------------------------------- NAVIGATION ----------------------------------------*/
+
+.logo {
+  font-family: "Fredoka One", cursive;
+  font-size: 30px !important;
+}
+
+.nav-icon-size {
+  font-size: 22px;
+}
+
+/*---------------------------------------- FOOTER ----------------------------------------*/
+
+footer {
+  height: 150px;
+}
+
+main {
+  height: 100vh;
+  background: url(/front-end/assets/img/background.jpg);
+}
+
+/*---------------------------------------- PRODUCT PAGE ----------------------------------------*/
+
+.product-main-page {
+  min-height: 900px;
+}
+
+.numberForm {
+  width: 70px !important;
+  margin-top: 1rem;
+}
+
+img {
+  max-width: 400px;
+}
+.addToCart-btn:focus {
+  box-shadow: none !important;
+}
+@media screen and (max-width: 991px) {
+  .product-description {
+    padding: 0 2rem;
+    margin-top: 2rem;
+  }
+  #option-select {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .btn-panier {
+    margin-top: 1rem;
+  }
+}
+
+/*---------------------------------------- CART PAGE ----------------------------------------*/
+
+.cart-main-page {
+  min-height: 900px;
+}
+
+.summary {
+  height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 991px) {
+  .summary {
+    height: 200px;
+  }
+  .order-form {
+    margin-top: 1rem !important;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+}
+
+.delete-product {
+  font-size: 10px;
+  cursor: pointer;
+}
+
+#confirm-order {
+  margin-bottom: 1rem;
+}
+
+.invalid-field {
+  color: red;
+}
+/*---------------------------------------- CONFIRM PAGE ----------------------------------------*/
+
+.confirm-page {
+  min-height: 700px;
+}
+
+.confirmPrice {
+  font-weight: bold;
+}

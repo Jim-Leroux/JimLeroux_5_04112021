@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <title>ORINOCAM | Panier</title>
+</head>
+
+<body>
+
+    <!-------------------------------------- HEADER -------------------------------------->
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light logo" href="../index.html">ORINOCAM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center text-light">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link text-light">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html#section-block" class="nav-link text-light">Produit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./panier.html" class="nav-link text-light"><i
+                                    class="bi bi-bag nav-icon-size"></i></a>
+                        </li>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-------------------------------------- MAIN PAGE -------------------------------------->
+
+    <main class="d-flex align-items-center justify-content-center cart-main-page">
+
+        <div class="row p-3 bg-light w-75">
+            <div class="col summary">
+                <h2>Récapitulatif de votre commande</h2>
+                <div class="row my-3 quanity-name-price">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="total-price">Montant total = 0 €</div>
+                <button class="btn btn-danger my-3 delete-cart">Vider le panier</button>
+            </div>
+            <div class="col-lg product-description-margin flex-column order-form">
+                <h2>Commander</h2>
+                <p>Veuillez remplir le formulaire ci-dessous pour continuer.</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="firstname" class="form-label">Prénom</label>
+                        <input type="name" class="form-control" id="firstname" required />
+                        <span id="firstNameInvalid" class="invalid-field"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastname" class="form-label">Nom</label>
+                        <input type="name" class="form-control" id="lastname" required />
+                        <span id="lastNameInvalid" class="invalid-field"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="adress" class="form-label">Adresse</label>
+                        <input type="text" class="form-control" id="adress" required />
+                        <span id="adressInvalid" class="invalid-field"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="city" class="form-label">Ville</label>
+                        <input type="text" class="form-control" id="city" required />
+                        <span id="cityInvalid" class="invalid-field"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" required />
+                        <span id="emailInvalid" class="invalid-field"></span>
+                    </div>
+
+                </form>
+                <button id="confirm-order" type="submit" name="confirm-order" class="btn btn-warning">Commander</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-------------------------------------- FOOTER -------------------------------------->
+
+    <footer class="
+        container-fluid
+        bg-dark
+        d-flex
+        justify-content-center
+        align-items-center
+      ">
+        <a class="fs-1 px-3 text-light" href="#"><i class="bi bi-facebook"></i></a>
+        <a class="fs-1 px-3 text-light" href="#"><i class="bi bi-instagram"></i></a>
+        <a class="fs-1 px-3 text-light" href="#"><i class="bi bi-twitter"></i></a>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+
+    <!-- Index.js -->
+
+    <script src="../js/panier.js"></script>
+</body>
+
+</html>
