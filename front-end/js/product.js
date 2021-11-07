@@ -78,7 +78,7 @@ const PRODUCT_DISPLAY = async () => {
                   <button class="btn btn-warning addToCart-btn onclick="this.blur()">Ajouter au panier</button>
                   <a class="btn btn-warning btn-panier" href="panier.html">Voir le panier</a>
                 </div>
-                <a class="continueShop" href="../index.html#product">Continuer mes achats</a>
+                <a class="continueShop" href="../../index.html#product">Continuer mes achats</a>
                 </div>
               </div>
           </div>

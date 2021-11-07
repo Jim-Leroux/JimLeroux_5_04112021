@@ -48,7 +48,7 @@ const PRODUCT_DISPLAY = async () => {
             <h2 id="product-title">${product.name}</h2>
             <p id="product-description">${product.description}</p>
             <h3 id="product-price">${PRICE_CALC(product.price) + " €"}</h3>
-            <a class="btn btn-warning" href="./html/product.html?id=${
+            <a class="btn btn-warning" href="./front-end/html/product.html?id=${
               product._id
             }">Acheter</a>
           </div>

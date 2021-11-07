@@ -193,34 +193,34 @@ BTN_PUSH_FORM.addEventListener("click", () => {
   if (
     firstNameControl() &&
     lastNameControl() &&
-    cityControl() &&
     adressControl() &&
+    cityControl() &&
     emailControl()
   ) {
     localStorage.setItem("form", JSON.stringify(FORM_FIELDS));
+    // Création d'un objet avec les valeurs et les produits à envoyer au serveur
+
+    const contact = FORM_FIELDS;
+    const products = productInCart.map((product) => product.id);
+    const TO_SEND = {
+      contact,
+      products,
+    };
+
+    console.log(products);
+    const SEND = fetch("http://localhost:3000/api/cameras/order", {
+      method: "POST",
+      body: JSON.stringify(TO_SEND),
+      headers: { "Content-Type": "application/json" },
+    });
+    console.log(SEND);
+    SEND.then(async (response) => {
+      const CONTENT = await response.json();
+      console.log(CONTENT);
+      localStorage.setItem("backend", JSON.stringify(CONTENT));
+      localStorage.removeItem("form");
+      localStorage.removeItem("product");
+      window.location = "confirm.html";
+    });
   }
-  // Création d'un objet avec les valeurs et les produits à envoyer au serveur
-
-  const contact = FORM_FIELDS;
-  const products = productInCart.map((product) => product.id);
-  const TO_SEND = {
-    contact,
-    products,
-  };
-
-  console.log(products);
-  const SEND = fetch("http://localhost:3000/api/cameras/order", {
-    method: "POST",
-    body: JSON.stringify(TO_SEND),
-    headers: { "Content-Type": "application/json" },
-  });
-  console.log(SEND);
-  SEND.then(async (response) => {
-    const CONTENT = await response.json();
-    console.log(CONTENT);
-    localStorage.setItem("backend", JSON.stringify(CONTENT));
-    localStorage.removeItem("form");
-    localStorage.removeItem("product");
-    window.location = "confirm.html";
-  });
 });
