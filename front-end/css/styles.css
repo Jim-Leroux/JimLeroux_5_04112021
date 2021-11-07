@@ -25,7 +25,7 @@
 
 main {
   height: 100vh;
-  background: url(./front-end/assets/img/background.jpg);
+  background: url(../assets/img/background.jpg);
 }
 
 /*---------------------------------------- FOOTER ----------------------------------------*/
