@@ -39,7 +39,7 @@ const FETCH_USER = async () => {
       </div>
     </main>"
     `;
-      console.log(error);
+      console.error(error);
     });
 };
 
@@ -100,6 +100,10 @@ const ADD_TO_CART = async () => {
 
   const HOW_MANY = document.querySelector(".numberForm");
   const ADDED = document.querySelector(".addToCart-btn");
+  if (!ADDED) {
+    ADD_TO_CART();
+    return;
+  }
 
   ADDED.addEventListener("click", () => {
     if (HOW_MANY.value > 0 && HOW_MANY.value < 100) {
@@ -145,5 +149,4 @@ const ADD_TO_CART = async () => {
     }
   });
 };
-
 ADD_TO_CART();

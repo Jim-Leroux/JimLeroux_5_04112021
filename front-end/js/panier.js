@@ -43,7 +43,7 @@ if (productInCart === null || productInCart == 0) {
       productDisplay +
       `
                     <div class="col-12 text-center">
-                        <div>Quantité 1 - ${productInCart[i].name} </div>
+                        <div>Quantité ${productInCart[i].quantity} - ${productInCart[i].name} </div>
                         <div class="d-flex align-items-center justify-content-center"><div>${productInCart[i].price} € -</div>
                         <div class="delete-product text-danger d-flex align-items-center justify-content-center mx-1">Supprimer</div></div>
                     </div>
